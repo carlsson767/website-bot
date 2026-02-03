@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас — Мастер котлов сервис | Опыт и гарантии качества</title>
+  <meta name="description" content="ООО «Мастер Котлов Сервис» — профессиональный сервис по ремонту и обслуживанию котлов в Москве и области. Более 10 лет опыта, гарантия качества." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="О нас — Мастер котлов сервис" />
+  <meta property="og:description" content="Профессиональный сервис по ремонту и обслуживанию котлов. Более 10 лет опыта работы в Москве и области." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-main">Мастер котлов</span>
+          <span class="header__logo-sub">Сервис</span>
+        </a>
+
+        <nav class="nav" aria-label="Главная навигация">
+          <button class="nav__burger" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+            <li class="nav__item"><a href="about.html" class="nav__link nav__link--active">О нас</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__contacts">
+          <a href="tel:+79057873434" class="header__phone">+7 905 787 34 34</a>
+          <div class="header__actions">
+            <a href="https://wa.me/79057873434" class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://t.me" class="btn btn--ghost" target="_blank" rel="noopener">Telegram</a>
+            <button class="btn btn--primary js-open-modal" data-modal="request-modal">Вызвать инженера</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="hero__tagline">О компании</p>
+            <h1 class="hero__title" id="hero-title">О нас</h1>
+            <p class="hero__subtitle">
+              Профессиональный сервис по ремонту и обслуживанию котельного оборудования в Москве и Московской области.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Company -->
+      <section class="section section--grey" id="about-company">
+        <div class="container">
+          <h2 class="section__title">О компании</h2>
+          <p class="section__subtitle">
+            ООО «Мастер Котлов Сервис» — надежный партнер в области ремонта и обслуживания отопительного оборудования.
+          </p>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="card__title">Наш опыт</h3>
+              <p class="card__text">
+                Более 10 лет мы успешно работаем на рынке услуг по ремонту и обслуживанию котлов в Москве и области.
+              </p>
+              <ul class="card__list">
+                <li>Более 500 выполненных объектов</li>
+                <li>Работаем с любыми типами котлов</li>
+                <li>Квалифицированные инженеры</li>
+                <li>Собственный склад запчастей</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Наши преимущества</h3>
+              <p class="card__text">
+                Мы предлагаем комплексный подход к решению задач любой сложности.
+              </p>
+              <ul class="card__list">
+                <li>Срочный выезд инженера 24/7</li>
+                <li>Гарантия на все виды работ</li>
+                <li>Оригинальные запчасти</li>
+                <li>Прозрачное ценообразование</li>
+                <li>Индивидуальный подход к каждому клиенту</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Гарантии качества</h3>
+              <p class="card__text">
+                Мы гарантируем качественное выполнение всех работ и используем только проверенные материалы.
+              </p>
+              <ul class="card__list">
+                <li>Гарантия на работы до 2 лет</li>
+                <li>Гарантия на запчасти от производителя</li>
+                <li>Техническая поддержка после ремонта</li>
+                <li>Документооборот и отчетность</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Наша команда</h3>
+              <p class="card__text">
+                В нашей команде работают только опытные специалисты с многолетним стажем.
+              </p>
+              <ul class="card__list">
+                <li>Сертифицированные инженеры</li>
+                <li>Постоянное повышение квалификации</li>
+                <li>Соблюдение всех норм безопасности</li>
+                <li>Вежливое и профессиональное обслуживание</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="section" id="why-choose-us">
+        <div class="container">
+          <h2 class="section__title">Почему выбирают нас</h2>
+          <p class="section__subtitle">
+            Мы ценим каждого клиента и стремимся предоставить лучший сервис.
+          </p>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="card__title">Оперативность</h3>
+              <p class="card__text">
+                Выезжаем на объект в день обращения. В экстренных случаях — в течение 2-3 часов.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Профессионализм</h3>
+              <p class="card__text">
+                Наши инженеры имеют многолетний опыт работы с оборудованием всех производителей.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Доступные цены</h3>
+              <p class="card__text">
+                Прозрачное ценообразование без скрытых доплат. Фиксированная стоимость работ.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Надежность</h3>
+              <p class="card__text">
+                Гарантируем качество выполненных работ и предоставляем официальные гарантии.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Info -->
+      <section class="section section--grey" id="company-info">
+        <div class="container">
+          <h2 class="section__title">Реквизиты компании</h2>
+          <div class="hero__card" style="max-width: 600px; margin: 0 auto;">
+            <h3 class="hero__card-title" style="text-align: center;">ООО «Мастер Котлов Сервис»</h3>
+            <div style="margin-top: 20px; text-align: center;">
+              <p class="footer__text" style="margin: 8px 0;">
+                <strong>ИНН:</strong> 7751203134
+              </p>
+              <p class="footer__text" style="margin: 8px 0;">
+                <strong>ОГРН:</strong> 1217700378114
+              </p>
+              <p class="footer__text" style="margin: 8px 0;">
+                <strong>Регион работы:</strong> Москва и Московская область
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section">
+        <div class="container">
+          <div class="hero__card" style="max-width: 600px; margin: 0 auto;">
+            <h2 class="hero__card-title" style="text-align: center;">Готовы начать сотрудничество?</h2>
+            <p class="hero__card-text" style="text-align: center;">
+              Свяжитесь с нами любым удобным способом. Мы ответим на все ваши вопросы и подберем оптимальное решение.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+              <a href="tel:+79057873434" class="btn btn--primary btn--full" style="text-align: center;">
+                Позвонить: +7 905 787 34 34
+              </a>
+              <button class="btn btn--full btn--accent js-open-modal" data-modal="request-modal">
+                Оставить заявку
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <div class="footer__col">
+          <h2 class="footer__title">Контакты</h2>
+          <p class="footer__phone">
+            <a href="tel:+79057873434">+7 905 787 34 34</a>
+          </p>
+          <p class="footer__text">Москва и Московская область. Аварийный выезд.</p>
+          <div class="footer__actions">
+            <a href="https://wa.me/79057873434" class="btn btn--ghost" target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a href="https://t.me" class="btn btn--ghost" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__subtitle">Разделы сайта</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="about.html">О нас</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__subtitle">Компания</h3>
+          <p class="footer__text">
+            ООО «Мастер Котлов Сервис»<br />
+            ИНН 7751203134<br />
+            ОГРН 1217700378114
+          </p>
+          <p class="footer__text" id="privacy">
+            <a href="#privacy">Политика обработки персональных данных</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <p class="footer__copy">
+            © 2018—2024. Копирование материалов сайта запрещено.
+          </p>
+          <a href="#top" class="footer__up js-scroll-to" data-target="#top">Наверх</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal Form -->
+  <div class="modal-backdrop" id="request-modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close js-close-modal" aria-label="Закрыть">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+      <h3 class="modal__title" id="modal-title">Вызвать инженера</h3>
+      <p class="modal__subtitle">Заполните короткую анкету — мы подберем решение под вашу ситуацию.</p>
+      
+      <form class="form js-lead-form" novalidate>
+        <label class="form__field">
+          <span class="form__label">ФИО</span>
+          <input type="text" name="full_name" placeholder="Как к вам обращаться" />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Телефон *</span>
+          <input type="tel" name="phone" placeholder="+7 (999) 000-00-00" required />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Адрес объекта</span>
+          <input type="text" name="address" placeholder="Город, улица, дом" />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Удобное время для звонка</span>
+          <input type="text" name="best_time" placeholder="Например: сегодня после 18:00" />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Описание ситуации</span>
+          <textarea name="description" rows="3" placeholder="Кратко опишите проблему с котлом или системой отопления"></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+        <p class="form__note">
+          Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/telegram.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
+

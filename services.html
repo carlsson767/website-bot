@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Услуги — Мастер котлов сервис | Ремонт и монтаж котлов</title>
+  <meta name="description" content="Полный спектр услуг по ремонту, монтажу и обслуживанию котлов, парогенераторов и систем отопления в Москве и области. Детальная информация о наших услугах." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Услуги — Мастер котлов сервис" />
+  <meta property="og:description" content="Ремонт, монтаж, техническое обслуживание котлов всех типов. Профессиональные услуги с гарантией качества." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-main">Мастер котлов</span>
+          <span class="header__logo-sub">Сервис</span>
+        </a>
+
+        <nav class="nav" aria-label="Главная навигация">
+          <button class="nav__burger" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="services.html" class="nav__link nav__link--active">Услуги</a></li>
+            <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__contacts">
+          <a href="tel:+79057873434" class="header__phone">+7 905 787 34 34</a>
+          <div class="header__actions">
+            <a href="https://wa.me/79057873434" class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://t.me" class="btn btn--ghost" target="_blank" rel="noopener">Telegram</a>
+            <button class="btn btn--primary js-open-modal" data-modal="request-modal">Вызвать инженера</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="hero__tagline">Профессиональные услуги</p>
+            <h1 class="hero__title" id="hero-title">Наши услуги</h1>
+            <p class="hero__subtitle">
+              Полный спектр услуг по ремонту, монтажу и обслуживанию котельного и отопительного оборудования.
+            </p>
+            <div class="hero__cta">
+              <button class="btn btn--primary btn--lg js-open-modal" data-modal="request-modal">Заказать услугу</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Detail -->
+      <section class="section section--grey" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <h2 class="section__title" id="services-title">Услуги Мастер котлов</h2>
+          <p class="section__subtitle">
+            Мы предоставляем комплексные услуги по ремонту, монтажу и обслуживанию всех типов котельного оборудования.
+          </p>
+
+          <div class="cards cards--services">
+            <article class="card">
+              <h3 class="card__title">Ремонт котлов в Москве</h3>
+              <p class="card__text">
+                Диагностика и ремонт газовых, твердотопливных и жидкотопливных котлов с гарантией качества.
+              </p>
+              <ul class="card__list">
+                <li>Срочный выезд мастера в день обращения</li>
+                <li>Оригинальные запчасти от производителя</li>
+                <li>Гарантия на работы и запчасти до 2 лет</li>
+                <li>Диагностика неисправностей любой сложности</li>
+                <li>Ремонт автоматики и электроники</li>
+              </ul>
+              <div class="card__actions">
+                <button class="btn btn--primary js-open-modal" data-modal="request-modal">Заказать ремонт</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Монтаж системы отопления</h3>
+              <p class="card__text">
+                Проектирование, установка, автоматизация и обслуживание котельных и систем отопления в Москве и области.
+              </p>
+              <ul class="card__list">
+                <li>Разработка проекта отопления с учетом всех требований</li>
+                <li>Монтаж «под ключ» с соблюдением всех норм</li>
+                <li>Пусконаладка и настройка автоматики</li>
+                <li>Обучение персонала работе с оборудованием</li>
+                <li>Гарантийное и постгарантийное обслуживание</li>
+              </ul>
+              <div class="card__actions">
+                <button class="btn btn--primary js-open-modal" data-modal="request-modal">Заказать монтаж</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Обслуживание парогенераторов</h3>
+              <p class="card__text">
+                Ремонт, монтаж и техническое обслуживание промышленных парогенераторов и паровых котлов.
+              </p>
+              <ul class="card__list">
+                <li>Регулярное ТО оборудования по графику</li>
+                <li>Чистка и промывка теплообменников</li>
+                <li>Экстренный выезд инженера 24/7</li>
+                <li>Замена расходных материалов</li>
+                <li>Настройка режимов работы</li>
+              </ul>
+              <div class="card__actions">
+                <button class="btn btn--primary js-open-modal" data-modal="request-modal">Заказать обслуживание</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">
+                Ремонт и техническое обслуживание промышленных котлов
+              </h3>
+              <p class="card__text">
+                Многолетний опыт в ремонте и обслуживании промышленных водогрейных и паровых котлов.
+              </p>
+              <ul class="card__list">
+                <li>Комплексная диагностика оборудования</li>
+                <li>Плановое и аварийное обслуживание</li>
+                <li>Срочный выезд инженера</li>
+                <li>Ремонт горелок и автоматики</li>
+                <li>Гидравлические испытания</li>
+              </ul>
+              <div class="card__actions">
+                <button class="btn btn--primary js-open-modal" data-modal="request-modal">Заказать услугу</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Services -->
+      <section class="section" id="additional-services">
+        <div class="container">
+          <h2 class="section__title">Дополнительные услуги</h2>
+          <p class="section__subtitle">
+            Мы также предоставляем дополнительные услуги для полного комплекса работ с отопительным оборудованием.
+          </p>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="card__title">Промывка системы отопления</h3>
+              <p class="card__text">
+                Химическая и гидродинамическая промывка систем отопления для восстановления эффективности работы.
+              </p>
+              <ul class="card__list">
+                <li>Диагностика состояния системы</li>
+                <li>Выбор метода промывки</li>
+                <li>Проведение работ</li>
+                <li>Контроль качества</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Замена и установка радиаторов</h3>
+              <p class="card__text">
+                Замена старых радиаторов на современные модели с улучшенной теплоотдачей.
+              </p>
+              <ul class="card__list">
+                <li>Подбор оптимальных радиаторов</li>
+                <li>Демонтаж старого оборудования</li>
+                <li>Установка новых радиаторов</li>
+                <li>Подключение и опрессовка</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Настройка автоматики</h3>
+              <p class="card__text">
+                Программирование и настройка систем автоматического управления отоплением.
+              </p>
+              <ul class="card__list">
+                <li>Настройка терморегуляторов</li>
+                <li>Программирование режимов работы</li>
+                <li>Интеграция с системами умного дома</li>
+                <li>Обучение пользователей</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Консультации и проектирование</h3>
+              <p class="card__text">
+                Профессиональные консультации и разработка проектов систем отопления.
+              </p>
+              <ul class="card__list">
+                <li>Техническое обследование объекта</li>
+                <li>Разработка проекта</li>
+                <li>Согласование документации</li>
+                <li>Техническая поддержка</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section section--grey">
+        <div class="container">
+          <div class="hero__card" style="max-width: 600px; margin: 0 auto;">
+            <h2 class="hero__card-title" style="text-align: center;">Нужна консультация?</h2>
+            <p class="hero__card-text" style="text-align: center;">
+              Оставьте заявку, и наш инженер свяжется с вами в течение 15 минут для обсуждения деталей.
+            </p>
+            <button class="btn btn--full btn--accent js-open-modal" data-modal="request-modal">Оставить заявку</button>
+            <p class="form__note" style="text-align: center; margin-top: 12px;">
+              Выезд бесплатно. Диагностика от 10 000 рублей.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <div class="footer__col">
+          <h2 class="footer__title">Контакты</h2>
+          <p class="footer__phone">
+            <a href="tel:+79057873434">+7 905 787 34 34</a>
+          </p>
+          <p class="footer__text">Москва и Московская область. Аварийный выезд.</p>
+          <div class="footer__actions">
+            <a href="https://wa.me/79057873434" class="btn btn--ghost" target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a href="https://t.me" class="btn btn--ghost" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__subtitle">Разделы сайта</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="about.html">О нас</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__subtitle">Компания</h3>
+          <p class="footer__text">
+            ООО «Мастер Котлов Сервис»<br />
+            ИНН 7751203134<br />
+            ОГРН 1217700378114
+          </p>
+          <p class="footer__text" id="privacy">
+            <a href="#privacy">Политика обработки персональных данных</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <p class="footer__copy">
+            © 2018—2024. Копирование материалов сайта запрещено.
+          </p>
+          <a href="#top" class="footer__up js-scroll-to" data-target="#top">Наверх</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal Form -->
+  <div class="modal-backdrop" id="request-modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close js-close-modal" aria-label="Закрыть">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+      <h3 class="modal__title" id="modal-title">Вызвать инженера</h3>
+      <p class="modal__subtitle">Заполните короткую анкету — мы подберем решение под вашу ситуацию.</p>
+      
+      <form class="form js-lead-form" novalidate>
+        <label class="form__field">
+          <span class="form__label">ФИО</span>
+          <input type="text" name="full_name" placeholder="Как к вам обращаться" />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Телефон *</span>
+          <input type="tel" name="phone" placeholder="+7 (999) 000-00-00" required />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Адрес объекта</span>
+          <input type="text" name="address" placeholder="Город, улица, дом" />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Удобное время для звонка</span>
+          <input type="text" name="best_time" placeholder="Например: сегодня после 18:00" />
+        </label>
+        <label class="form__field">
+          <span class="form__label">Описание ситуации</span>
+          <textarea name="description" rows="3" placeholder="Кратко опишите проблему с котлом или системой отопления"></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+        <p class="form__note">
+          Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/telegram.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
+
