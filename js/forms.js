@@ -38,11 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
           description: formData.get('description')
       };
 
-      // Определяем URL API
-      // ВАЖНО: Если бот и сайт на разных серверах, укажите здесь прямой IP адреса бота
-      // Например: const apiUrl = 'http://123.45.67.89:8000/submit';
-      const apiHost = window.location.hostname || 'localhost';
-      const apiUrl = `http://${apiHost}:8000/submit`;
+      // На Vercel заявка уходит в /api/telegram — там отправка в Telegram и ответ «успех»
+      const apiUrl = '/api/telegram';
 
       fetch(apiUrl, {
         method: 'POST',
@@ -53,29 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(response => {
          if (!response.ok) {
-             throw new Error('Network response was not ok');
+             throw new Error('Ошибка связи с сервером');
          }
          return response.json();
       })
       .then(result => {
-        if (result.status === 'success') {
+        if (result.status === 'success' || result.ok) {
              form.reset();
              showFormMessage(
                form,
                'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.',
                'success',
              );
-             
-             // Отправка уведомления в Telegram
-             if (typeof sendTelegramNotification !== 'undefined' && typeof formatApplicationMessage !== 'undefined') {
-               const telegramMessage = formatApplicationMessage(data);
-               sendTelegramNotification(telegramMessage).catch(err => {
-                 console.error('Ошибка отправки уведомления в Telegram:', err);
-                 // Не показываем ошибку пользователю, так как основная заявка уже отправлена
-               });
-             }
         } else {
-             showFormMessage(form, 'Ошибка: ' + (result.message || 'Не удалось сохранить заявку'), 'error');
+             showFormMessage(form, 'Ошибка: ' + (result.error || result.message || 'Не удалось отправить заявку'), 'error');
         }
       })
       .catch(error => {
