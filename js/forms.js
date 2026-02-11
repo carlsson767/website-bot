@@ -18,16 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      phoneInput.disabled = true;
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalBtnText = submitBtn ? submitBtn.textContent : 'Отправить';
-      
-      if (submitBtn) {
-        submitBtn.textContent = 'Отправка...';
-        submitBtn.disabled = true;
-      }
-
-      // Сбор данных
+      // Сбор данных (важно: до disabled, иначе поле phone не попадёт в FormData)
       const formData = new FormData(form);
       const data = {
           name: formData.get('full_name'),
@@ -37,6 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
           best_time: formData.get('best_time'),
           description: formData.get('description')
       };
+
+      phoneInput.disabled = true;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.textContent : 'Отправить';
+      
+      if (submitBtn) {
+        submitBtn.textContent = 'Отправка...';
+        submitBtn.disabled = true;
+      }
 
       // Запрос на тот же домен (Vercel: ваш-сайт.vercel.app/api/telegram)
       const apiUrl = (window.location.origin || '') + '/api/telegram';
