@@ -66,6 +66,20 @@ module.exports = async (req, res) => {
     if (body.best_time) message += '⏰ <b>Удобное время:</b> ' + esc(body.best_time) + '\n';
     if (body.description) message += '\n📝 <b>Описание:</b>\n' + esc(body.description) + '\n';
   }
+
+  if (body.request_topic && message.trim()) {
+    const topic = String(body.request_topic).trim();
+    if (topic) {
+      message = '📌 <b>Заявка на ' + topic.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</b>\n\n' + message;
+    }
+  }
+
+  if (body.request_type === 'urgent' && message.trim()) {
+    message =
+      '‼️‼️‼️ <b>СРОЧНЫЙ ВЫЗОВ</b> ‼️‼️‼️\n<b>Свяжитесь с человеком для обсуждения деталей.</b>\n\n' +
+      message;
+  }
+
   if (!message.trim()) {
     return res.status(400).json({ ok: false, error: 'message is required' });
   }

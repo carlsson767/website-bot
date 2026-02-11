@@ -19,6 +19,7 @@ function initRequestModal() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       if (btn.getAttribute('data-modal') === modalId) {
+        applyRequestType(modalBackdrop, btn);
         modalBackdrop.classList.add('is-visible');
         document.body.style.overflow = 'hidden'; // Prevent scrolling
       }
@@ -42,6 +43,29 @@ function initRequestModal() {
       closeModal();
     }
   });
+}
+
+function applyRequestType(modalBackdrop, triggerButton) {
+  const form = modalBackdrop.querySelector('.js-lead-form');
+  if (!(form instanceof HTMLFormElement)) return;
+
+  const requestType = triggerButton.getAttribute('data-request-type') || '';
+  const requestTopic = triggerButton.getAttribute('data-request-topic') || '';
+
+  upsertHiddenInput(form, 'request_type', requestType);
+  upsertHiddenInput(form, 'request_topic', requestTopic);
+}
+
+function upsertHiddenInput(form, name, value) {
+  let hiddenInput = form.querySelector(`input[name="${name}"]`);
+  if (!(hiddenInput instanceof HTMLInputElement)) {
+    hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = name;
+    form.appendChild(hiddenInput);
+  }
+
+  hiddenInput.value = value;
 }
 
 function initScrollAnimations() {

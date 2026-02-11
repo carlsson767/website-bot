@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
           address: formData.get('address'),
           boiler_model: formData.get('boiler_model'),
           best_time: formData.get('best_time'),
-          description: formData.get('description')
+          description: formData.get('description'),
+          request_type: formData.get('request_type'),
+          request_topic: formData.get('request_topic')
       };
 
       phoneInput.disabled = true;
