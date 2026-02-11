@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/api/telegram"
+  to = "/.netlify/functions/telegram"
+  status = 200

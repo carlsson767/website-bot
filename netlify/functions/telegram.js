@@ -51,7 +51,30 @@ exports.handler = async (event, context) => {
     };
   }
 
-  const message = body.message || body.text || '';
+  // Готовое сообщение или данные формы — собираем текст для Telegram
+  let message = body.message || body.text || '';
+  if (!message.trim() && (body.name || body.phone)) {
+    const date = new Date().toLocaleString('ru-RU', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+    const esc = (t) =>
+      t == null || t === ''
+        ? ''
+        : String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+    message = '🔔 <b>Новая заявка с сайта</b>\n\n📅 <b>Дата:</b> ' + date + '\n\n';
+    if (body.name) message += '👤 <b>ФИО:</b> ' + esc(body.name) + '\n';
+    if (body.phone) message += '📞 <b>Телефон:</b> ' + esc(body.phone) + '\n';
+    if (body.address) message += '📍 <b>Адрес:</b> ' + esc(body.address) + '\n';
+    if (body.boiler_model) message += '🔥 <b>Модель котла:</b> ' + esc(body.boiler_model) + '\n';
+    if (body.best_time) message += '⏰ <b>Удобное время:</b> ' + esc(body.best_time) + '\n';
+    if (body.description) message += '\n📝 <b>Описание:</b>\n' + esc(body.description) + '\n';
+  }
+
   if (!message.trim()) {
     return {
       statusCode: 400,
@@ -103,6 +126,6 @@ exports.handler = async (event, context) => {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
     },
-    body: JSON.stringify({ ok: true, sent }),
+    body: JSON.stringify({ ok: true, sent, status: 'success' }),
   };
 };

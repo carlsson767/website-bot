@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
           description: formData.get('description')
       };
 
-      // На Vercel заявка уходит в /api/telegram — там отправка в Telegram и ответ «успех»
-      const apiUrl = '/api/telegram';
+      // Запрос на тот же домен (Vercel: ваш-сайт.vercel.app/api/telegram)
+      const apiUrl = (window.location.origin || '') + '/api/telegram';
 
       fetch(apiUrl, {
         method: 'POST',
